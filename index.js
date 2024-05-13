@@ -4,6 +4,7 @@ const formEl = document.querySelector("form");
 const inputEl = document.querySelector( "#search-input");
 const searchResults = document.querySelector(".search-results");
 const showMore = document.getElementById("show-more-button");
+const search_btn = document.querySelector("#search-button");
 
 let inputData = "";
 let page = 1;
@@ -54,3 +55,11 @@ formEl.addEventListener("submit", (event) =>{
 showMore.addEventListener("click", () =>{
     searchimages();
 });
+
+search_btn.onclick = function(){
+    this.innerHTML = "<div class='loader'></div>";
+    setTimeout(() => {
+        this.innerHTML = "Search";
+    }, 2000);
+}
+
