@@ -48,6 +48,24 @@ form{
     margin-left: 10px;
 }
 
+.loader{
+    pointer-events: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: white;
+    animation: an1 1s ease infinite;
+}
+@keyframes an1{
+    0%{
+        transform: rotate(0turn);
+    }
+    100%{
+        transform: rotate(1turn);
+    }
+}
+
 .search-results{
     display: flex;
     justify-content: space-between;
@@ -99,7 +117,7 @@ form{
     display: none;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 568px){
     .search-results{
         padding: 20px;
     }
@@ -108,7 +126,7 @@ form{
     }
 }
 
-@media screen and (max-width: 480px){
+@media screen and (max-width: 380px){
     .search-result{
         width: 100%;
     }
